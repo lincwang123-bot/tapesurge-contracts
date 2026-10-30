@@ -278,6 +278,7 @@ contract CheckMainnet is Script {
         _addr("trader.BEM", address(ftrader.BEM()), m.bem);
         _addr("trader.HUB", address(ftrader.HUB()), address(factory));
         _addr("trader.ASK_EXCHANGE", ftrader.ASK_EXCHANGE(), m.firstoAskExchange);
+        _addr("trader.SIGNED_ASK", ftrader.SIGNED_ASK(), m.firstoSignedAsk);
         _addr("trader.BID_EXCHANGE", ftrader.BID_EXCHANGE(), m.firstoBidExchange);
         _addr("trader.SWAPPER", address(ftrader.SWAPPER()), address(fswapper));
         _addr("trader.ORACLE", address(ftrader.ORACLE()), address(oracle));
