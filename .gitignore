@@ -1,0 +1,22 @@
+# 密钥和本地环境（.env.testnet 里有测试网私钥和 RPC 地址）
+.env*
+!.env.example
+
+# 构建产物和 forge 的本地记录（cache/ 里有 RPC 地址，broadcast/ 里有交易记录）
+out/
+cache/
+broadcast/
+
+# 日志：可能带有本地路径或运行输出，只保留测试网的交易哈希记录
+*.log
+!deployments/97-run.log
+!deployments/97-v2-run.log
+
+# 本地链和模拟阶段的部署文件
+deployments/31337*
+deployments/*-start-balance
+deployments/*.pending.json
+deployments/*.simulated.json
+deployments/*.invalid
+
+.DS_Store

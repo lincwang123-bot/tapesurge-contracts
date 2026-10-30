@@ -1,0 +1,49 @@
+{
+ "note": "Firsto API snapshot for the FIRSTO_PROBE fork tests (public order data; orders expire or get filled)",
+ "askSourceBlock": "129310245",
+ "bidSourceBlock": "129310440",
+ "bidExchange": "0x9273d46b77B67Ba9B24177C25EC25fcbADf27040",
+ "ask": {
+  "exchange": "0x3f58c9cbce933c76158b2a29b0d612c46546dc43",
+  "maker": "0x6fd059660ae5d73d951a9397b9f3a918768d2c73",
+  "merkleRoot": "0xd399a118298de4a72b321aa817a607eb10f9306e5cbed53ea4710c92292216da",
+  "batchNonce": "54620443368357797138466063201293879550178533081972818632632556939238012654454",
+  "expiry": "1795323359",
+  "payoutRecipient": "0x6fd059660ae5d73d951a9397b9f3a918768d2c73",
+  "feeBps": "100",
+  "feeEpoch": "1",
+  "schemaVersion": "1",
+  "collection": "0xb1024b89886b9a34aa4ff5f31c411d708b20a14c",
+  "tokenId": "8502",
+  "priceWei": "450134400000000000",
+  "leafIndex": "0",
+  "merkleProof": [
+   "0x1badbb013766ed4396db06663095065828ea29a0253d151631185f9952fe9542",
+   "0xaf55d4a903029d0375e4d737d95fcc38fcf002459a835f8496e5090238a3dee1",
+   "0x3ed509cc92e5137558550c734c4a5bfa754f2f0093eaaf74647f79d714efeb77",
+   "0x51c489cddf919e0d40ddf115c8d3f19daabae02c6daf8eb4baade5345be51cbe"
+  ],
+  "signature": "0xc9ae5986902d2c3c365fc404324fb289af9d0ea6ee848066cc737cf6aa23757c28c6abcf80cd629e1021b421af2a16e3310de74e99b334856f5cc4612bde6a681c",
+  "buyerCostWei": "454635744000000000",
+  "weight": "10",
+  "estimated24hAtomic": "4501318"
+ },
+ "bidAnySize": {
+  "orderId": "1210",
+  "maker": "0xBAF6EE5cFc7471996C410DfFe596A0948D3b4a6c",
+  "dailyCapacityPriceWei": "9400000000000000000",
+  "remainingBudgetWei": "1000000000000000000",
+  "minCircuitH": "0",
+  "maxCircuitH": "0",
+  "feeBps": "100"
+ },
+ "bidSizeRange": {
+  "orderId": "1215",
+  "maker": "0x514c343dfDBD7dfB19d9272ad011C0D56dB7A792",
+  "dailyCapacityPriceWei": "9500000000000000000",
+  "remainingBudgetWei": "932960000000000000",
+  "minCircuitH": "1",
+  "maxCircuitH": "30",
+  "feeBps": "100"
+ }
+}

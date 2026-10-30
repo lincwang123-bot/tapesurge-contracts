@@ -1,0 +1,32 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.28"
+evm_version = "shanghai"
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+# 统计测试会在一个测试函数里跑上万局，需要放宽单个测试的 gas 上限
+gas_limit = "18446744073709551615"
+fs_permissions = [{ access = "read", path = "./" }, { access = "read-write", path = "./deployments" }]
+
+# 按主网规则检查合约大小：运行时代码 ≤ 24,576 字节（EIP-170），初始化代码（含构造参数）≤ 49,152 字节（EIP-3860）。
+# Foundry 默认不检查，2026-10-19 测试网部署时才发现 BoardFactory 超限。测试合约和部署脚本本身会超过这个上限
+# （它们内嵌了整套创建代码，但不上链），所以只在这个配置里开启，配合 test/SizeLimits.t.sol 使用：
+#   FOUNDRY_PROFILE=sizecheck forge test --match-path test/SizeLimits.t.sol
+# script/testnet.sh deploy 部署前会先跑这一项。
+[profile.sizecheck]
+code_size_limit = 24576
+
+[profile.default.fuzz]
+runs = 256
+
+[rpc_endpoints]
+bsc = "${BSC_RPC_URL}"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[lint]
+# 构建时不输出 lint 提示（可以单独运行 forge lint 查看）
+lint_on_build = false
